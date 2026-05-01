@@ -138,39 +138,47 @@ export default function OrderBuilder() {
           transition={{ duration: 0.6 }}
         >
 
-          {/* ── STEP 1: Cake Flavour ── */}
-          <div className="p-6 sm:p-8">
-            <SectionHeading step={1} title="Choose Cake Flavour" />
-            <div className="grid grid-cols-2 gap-3">
-              {(Object.entries(CAKE_LABELS) as [CakeType, typeof CAKE_LABELS[CakeType]][]).map(([k, v]) => (
-                <motion.button
-                  key={k}
-                  onClick={() => setCakeType(k)}
-                  whileTap={{ scale: 0.97 }}
-                  className={`flex items-center gap-3 p-4 rounded-2xl border-2 text-left transition-all duration-200 ${
-                    cakeType === k
-                      ? 'border-[#7A1F6B] bg-[#7A1F6B]/8 shadow-sm'
-                      : 'border-[#E8D5B7] bg-[#FDFAF5] hover:border-[#F2A900]'
-                  }`}
-                >
-                  <span className="text-2xl flex-shrink-0">{v.emoji}</span>
-                  <div className="min-w-0">
-                    <p className={`font-bold text-sm truncate ${cakeType === k ? 'text-[#7A1F6B]' : 'text-[#4A2C0A]'}`}>
-                      {v.label}
-                    </p>
-                    <p className="text-xs text-[#7B4F26]/70 truncate">{v.desc}</p>
-                  </div>
-                  {cakeType === k && (
-                    <span className="ml-auto flex-shrink-0 w-5 h-5 rounded-full bg-[#7A1F6B] flex items-center justify-center">
-                      <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
-                        <path d="M1 4L3.5 6.5L9 1" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </span>
-                  )}
-                </motion.button>
-              ))}
-            </div>
-          </div>
+        {/* ── STEP 1: Cake Flavour ── */}
+<div className="p-4 sm:p-6 md:p-8">
+  <SectionHeading step={1} title="Choose Cake Flavour" />
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    {(Object.entries(CAKE_LABELS) as [CakeType, typeof CAKE_LABELS[CakeType]][]).map(([k, v]) => (
+      <motion.button
+        key={k}
+        onClick={() => setCakeType(k)}
+        whileTap={{ scale: 0.97 }}
+        className={`flex items-start gap-3 p-4 rounded-2xl border-2 text-left transition-all duration-200 ${
+          cakeType === k
+            ? 'border-[#7A1F6B] bg-[#7A1F6B]/8 shadow-sm'
+            : 'border-[#E8D5B7] bg-[#FDFAF5] hover:border-[#F2A900]'
+        }`}
+      >
+        <span className="text-2xl flex-shrink-0">{v.emoji}</span>
+
+        <div className="flex-1">
+          <p className={`font-bold text-sm leading-tight ${
+            cakeType === k ? 'text-[#7A1F6B]' : 'text-[#4A2C0A]'
+          }`}>
+            {v.label}
+          </p>
+
+          <p className="text-xs text-[#7B4F26]/70 leading-snug">
+            {v.desc}
+          </p>
+        </div>
+
+        {cakeType === k && (
+          <span className="ml-auto flex-shrink-0 w-5 h-5 rounded-full bg-[#7A1F6B] flex items-center justify-center">
+            <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+              <path d="M1 4L3.5 6.5L9 1" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </span>
+        )}
+      </motion.button>
+    ))}
+  </div>
+</div>
 
           <Divider />
 
