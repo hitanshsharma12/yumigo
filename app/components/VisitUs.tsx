@@ -28,16 +28,16 @@ export default function VisitUs() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <iframe
-              src="https://maps.google.com/maps?q=Shimla+Himachal+Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="420"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="YumiGo Bakery Location"
-            />
+           <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3088.8934228078006!2d77.72778749999999!3d31.1836308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390583f6642fb8c7%3A0x5e12bb5284bf7a7c!2sYumigo!5e1!3m2!1sen!2sin!4v1778582437435!5m2!1sen!2sin"
+  width="100%"
+  height="420"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="Yumigo Location"
+/>
           </motion.div>
 
           {/* Info */}
@@ -49,16 +49,16 @@ export default function VisitUs() {
             transition={{ duration: 0.7 }}
           >
             {[
-              {
-                Icon: MapPin,
-                title: 'Address',
-                lines: ['YumiGo Bakery, Mall Road', 'Shimla, Himachal Pradesh — 171001'],
-              },
+             {
+  Icon: MapPin,
+  title: 'Address',
+  lines: ['Yumigo', 'Rohru, Himachal Pradesh'],
+},
               {
                 Icon: Phone,
                 title: 'Call / WhatsApp',
-                lines: ['+91 70187 96714'],
-                link: 'tel:+917018796714',
+                lines: ['+91 8278854238'],
+                link: 'tel:+918278854238',
               },
               {
                 Icon: Clock,

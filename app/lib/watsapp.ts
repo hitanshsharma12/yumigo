@@ -36,5 +36,5 @@ Thank you for ordering from YumiGo! 🧡
 
   const encoded = encodeURIComponent(msg)
 
-  return `https://wa.me/917018796714?text=${encoded}`
+  return `https://wa.me/918278854238?text=${encoded}`
 }
