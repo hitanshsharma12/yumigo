@@ -26,12 +26,12 @@ export default function Footer() {
           <div>
             <h4 className="font-display text-lg text-gold mb-4">Contact Us</h4>
             <ul className="space-y-2 font-body text-sm text-cream/60">
-              <li>📞 +91 70187 96714</li>
+              <li>📞 +91 8278854238</li>
               <li>📧 hello@yumigo.in</li>
-              <li>📍 Mall Road, Shimla</li>
+              <li>📍Dhonlu Devta Building, Rohru-Theog Highway, near New Apple Mandi, Mehendli, Himachal Pradesh 171207</li>
             </ul>
             <a
-              href="https://wa.me/917018796714"
+              href="https://wa.me/918278854238"
               className="mt-4 inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-bold px-5 py-2.5 rounded-full transition-colors"
             >
               💬 WhatsApp Us
@@ -44,7 +44,7 @@ export default function Footer() {
             © {new Date().getFullYear()} YumiGo Bakery. All rights reserved.
           </p>
           <p className="font-body text-cream/40 text-xs">
-            Made with 🧡 in Shimla, Himachal Pradesh
+            Made with 🧡 by Hitansh Sharma
           </p>
         </div>
       </div>
